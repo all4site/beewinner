@@ -1,0 +1,268 @@
+.headerMain
+	background: url("../img/header.png")
+	background-position: center
+	background-size: cover
+	height: 100vh
+	width: 100%
+	position: relative
+	overflow: hidden
+	align-items: center
+
+	&::before
+		content: ""
+		width: 100%
+		height: 100%
+		position: absolute
+		background-position: center
+		background-size: cover
+		background: inherit
+		filter: blur(10px)
+
+	&::after
+		content: ""
+		width: 100%
+		height: 100%
+		position: absolute
+		background-position: center
+		background-size: cover
+		background: fade-out($white, 0.5)
+
+.aboutHeaderMain
+	grid-template-columns: 1fr
+	position: absolute
+	width: 100%
+	z-index: 1
+	background: fade-out($pink, 0.4)
+	color: $white
+	padding: 50px 0
+
+.logoAbout
+	max-width: 630px
+	justify-self: center
+
+.infoAbout
+	justify-self: center
+	grid-template-columns: repeat(2, max-content)
+	grid-template-rows: repeat(2, min-content)
+	margin-top: 30px
+
+	span:nth-of-type(1)
+		grid-column: span 2
+		grid-row: 1
+		justify-self: center
+		font-size: 2rem
+		border-bottom: 1px solid $white
+		padding: 0 40px
+
+	span:nth-of-type(2),
+	span:nth-of-type(3)
+		grid-column: span 1
+		grid-row: span 2
+		font-size: 0.8rem
+		padding: 5px
+		margin: 5px
+
+	span:nth-of-type(3)
+		border-left: 1px solid $white
+		padding-left: 10px
+
+.textAbout
+	grid-auto-flow: column
+	align-items: center
+	justify-content: center
+	grid-auto-columns: max-content
+
+	.fas
+		font-size: 1.4rem
+		padding: 0 10px
+
+	.fas:nth-of-type(2),
+	.fas:nth-of-type(3)
+		margin-left: 100px
+
+.fullWelcome
+	background: fade-out($black, 0.95)
+	margin-top: 50px
+	width: 100%
+
+.welcome
+	grid-template-columns: 1fr 2fr
+	grid-column-gap: 40px
+	text-align: center
+	padding: 50px 0
+
+	.more
+		margin-top: 30px
+
+.blog
+	margin-top: 50px
+	grid-template-columns: repeat(3, minmax(200px, 540px))
+	text-align: center
+	text-transform: uppercase
+	grid-gap: 10px
+
+	.item
+		min-height: 200px
+		align-content: center
+
+	.item:not(:first-child)
+		h4
+			font-weight: 100
+
+	.item:first-child
+		background: $accent
+
+	.item:nth-of-type(2n)
+		background: $pink
+
+	.item:not(:first-child):nth-of-type(2n+1)
+		background: $blue
+
+.aboutProgect
+	.more
+		justify-self: center
+
+.fullImg
+	background: $blue
+	text-transform: uppercase
+	color: $white
+	font-size: 3.5rem
+	text-align: center
+	font-weight: bold
+	padding: 50px 0
+	margin-top: 50px
+
+.gift
+	margin-top: 100px
+	position: relative
+	background: $pink
+	color: $white
+	padding-bottom: 50px
+
+	.iconGift
+		background: $white
+		border: 1px solid $pink
+		border-radius: 100%
+		width: 100px
+		height: 100px
+		position: absolute
+		justify-content: center
+		align-content: center
+		justify-self: center
+		margin-top: -50px
+
+		.fas
+			color: $blue
+			font-size: 2.5rem
+
+	.giftHeader
+		justify-self: center
+		padding: 0 30px
+		margin-top: 50px
+		border-bottom: 1px solid $white
+
+	.giftBottom
+		justify-self: center
+		text-align: center
+		font-size: 1.5rem
+		margin-top: 30px
+		margin-bottom: 30px
+
+	a
+		padding: 10px 100px
+
+.trenings
+	grid-template-columns: repeat(3, 1fr)
+	grid-column-gap: 50px
+	margin-top: 20px
+
+	.box:nth-of-type(1)
+		background: fade-out($pink, 0.5)
+
+	.box:nth-of-type(2)
+		background: fade-out($accent, 0.5)
+
+	.box:nth-of-type(3)
+		background: fade-out($blue, 0.5)
+
+	.box
+		padding: 30px
+
+	.boxInside
+		background: fade-out($white, 0.6)
+		padding: 10px
+		text-align: center
+
+		h4
+			font-weight: normal
+			margin: 20px 0
+
+		.far
+			color: $pink
+			font-size: 3rem
+			margin: 0 0 20px 0
+
+		span
+			text-align: left
+
+		.btn
+			margin: 30px 0 20px
+
+.fullFooter
+	background: fade-out($blue, 0.5)
+	margin-top: 50px
+
+.footerTop
+	grid-template-columns: 1fr 2fr 1fr
+	grid-column-gap: 20px
+	text-align: center
+
+	ul
+		list-style: none
+		margin: 0
+		padding: 0
+
+		li
+			padding: 10px 0
+
+	h5
+		margin: 50px 0 20px 0
+
+	.menu
+		background: fade-out($blue, 0.4)
+		grid-auto-rows: min-content
+
+	.work
+		background: fade-out($blue, 0.4)
+		grid-auto-rows: min-content
+
+	.feedback
+		margin-bottom: 50px
+		h5
+			margin-bottom: 50px
+		form
+			padding: 0 50px
+			grid-row-gap: 20px
+			input
+				background: inherit
+				border: none
+				border-bottom: 1px solid $black
+				outline: none
+			textarea
+				background: inherit
+				border: 1px solid $black
+				resize: none
+			label
+				transform: translate(0, -45px)
+				text-align: left
+			input[type="submit"]
+				border: none
+				background: $accent
+				&:hover
+					background: darken($accent, 20%)
+
+.footerBottom
+	background: $blue
+	height: 80px
+
+//end

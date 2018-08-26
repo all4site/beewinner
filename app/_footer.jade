@@ -1,0 +1,39 @@
+.fullFooter
+	.wrapper
+		.footer.grid
+			.footerTop.grid
+				.menu.grid
+					h5 menu
+					ul
+						li Обо мне
+						li О проекте
+						li FAQ
+						li Блог
+						li Цены
+						li Связь
+						li Конфиденцильность
+				.feedback.grid
+					h5 записаться на консультацию
+					form(action="mail.php" method="POST").grid#form
+
+						//- HODDEN FORM
+						input(type="hidden" name="project_name" value="Форма оботной связи PavlikGovor")
+						input(type="hidden" name="admin_email" value="all4sitecomua@gmail.com")
+						input(type="hidden" name="form_subject" value="TEST")
+						//- END HIDDEN FORM
+
+						input(name="name" type="text").grid
+						label.grid имя
+						input(type="text" name="email").grid
+						label.grid email
+						textarea(name="somText", cols="30", rows="10").grid
+						input(type="submit" value="ОТПРАВИТЬ").btn
+				.work.grid
+					h5 график работы
+					ul
+						li ПН 9-00 - 10-00
+						li ВТ 9-00 - 10-00
+						li СР 9-00 - 10-00
+						li ЧТ 9-00 - 10-00
+						li ПТ 9-00 - 10-00
+	.footerBottom.grid
