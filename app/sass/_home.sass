@@ -71,6 +71,7 @@
 	align-items: center
 	justify-content: center
 	grid-auto-columns: max-content
+	margin-top: 50px
 
 	.fas
 		font-size: 1.4rem
@@ -95,7 +96,7 @@
 		margin-top: 30px
 
 .blog
-	margin-top: 50px
+	margin: 50px
 	grid-template-columns: repeat(3, minmax(200px, 540px))
 	text-align: center
 	text-transform: uppercase
@@ -122,18 +123,8 @@
 	.more
 		justify-self: center
 
-.fullImg
-	background: $blue
-	text-transform: uppercase
-	color: $white
-	font-size: 3.5rem
-	text-align: center
-	font-weight: bold
-	padding: 50px 0
-	margin-top: 50px
-
 .gift
-	margin-top: 100px
+	margin: 50px 0
 	position: relative
 	background: $pink
 	color: $white
@@ -237,32 +228,40 @@
 		grid-auto-rows: min-content
 
 	.feedback
-		margin-bottom: 50px
-		h5
-			margin-bottom: 50px
+		margin-bottom: 20px
+
+
 		form
 			padding: 0 50px
-			grid-row-gap: 20px
+			grid-row-gap: 10px
+
 			input
 				background: inherit
 				border: none
 				border-bottom: 1px solid $black
 				outline: none
+
 			textarea
 				background: inherit
 				border: 1px solid $black
 				resize: none
+
 			label
-				transform: translate(0, -45px)
+				transform: translate(0, -35px)
 				text-align: left
+				z-index: -1
+
 			input[type="submit"]
 				border: none
 				background: $accent
+
 				&:hover
 					background: darken($accent, 20%)
 
 .footerBottom
 	background: $blue
 	height: 80px
+
+
 
 //end

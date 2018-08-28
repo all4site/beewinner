@@ -45,9 +45,9 @@ gulp.task('build', ['clean', 'tiny', 'combine'], function () {
 	var buildFonts = gulp.src('app/img/*.svg')
 		.pipe(gulp.dest('dist/img/'))
 	var buildUncss = gulp.src('dist/css/main.min.css')
-		.pipe(uncss({
-			html: ['dist/index.html']
-		}))
+		// .pipe(uncss({
+		// 	html: ['dist/index.html']
+		// }))
 		.pipe(gulp.dest('dist/css'));
 });
 
@@ -77,6 +77,7 @@ gulp.task('clean', function () {
 	return del.sync(['dist/css', 'dist/fonts', 'dist/js', 'dist/index.html']);
 });
 
+// END BUILD
 
 // WORK
 gulp.task('sass', function () {
@@ -97,7 +98,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('jade', function () {
-	gulp.src('app/index.jade')
+	gulp.src(['app/*.jade','!app/_*.jade'])
 		.pipe(jade({
 			pretty: true
 		}))
@@ -118,7 +119,7 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('bower', function () {
-	gulp.src('app/index.jade')
+	gulp.src(['app/_header.jade','app/_footer.jade'])
 		.pipe(wiredep({
 			diewctory: 'app/js'
 		}))
@@ -135,3 +136,5 @@ gulp.task('default', ['browser-sync', 'jade', 'bower'], function () {
 	gulp.watch('app/js/main.js', browserSync.reload);
 	gulp.watch('bower.json', ['bower']);
 });
+
+// END WORK

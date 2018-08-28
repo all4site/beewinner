@@ -1,0 +1,83 @@
+.blogPage
+	display: grid
+	grid-template-columns: 2fr 1fr
+
+	.blogInside
+		margin-bottom: 50px
+
+		h4
+			text-align: center
+			font-weight: normal
+			margin: 30px 0 0
+
+		.more
+			text-align: right
+
+	.pagination
+		grid-column: span 2
+		display: grid
+		grid-auto-flow: column
+		align-items: center
+		justify-content: center
+		grid-auto-columns: minmax(20px, 50px)
+
+		img
+			width: 10px
+
+.categoryBloc
+	display: grid
+	grid-auto-rows: min-content
+	grid-template-columns: minmax(200px, 350px)
+	justify-content: end
+
+.categoryContentWrapper
+	display: grid
+	grid-template-columns: minmax(200px, 250px)
+	justify-content: center
+	background: fade-out($pink, 0.5)
+
+	h4
+		color: $pink
+		text-align: center
+		margin: 20px 0
+		font-size: 1.4rem
+
+	span
+		color: $white
+		font-size: 1.6rem
+		font-style: italic
+
+	.popular
+		text-align: center
+
+	.headings
+		grid-template-columns: 1fr min-content
+		align-items: center
+
+		span:nth-of-type(2n)
+			font-size: 1rem
+			color: $pink
+
+		h4
+			grid-column: span 2
+
+	.recomendedBloc
+		color: $white
+		margin-bottom: 50px
+
+		img
+			max-width: 300px
+
+		span
+			font-size: 1rem
+
+		p
+			font-size: 1.5rem
+			text-align: center
+			margin: 10px 0
+
+		.more
+			text-align: right
+
+			span
+				color: $pink
