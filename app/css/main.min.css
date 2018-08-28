@@ -679,30 +679,137 @@ h6 {
   .ui-datepicker-inline .ui-state-default {
     color: #fff; }
   .ui-datepicker-inline .ui-datepicker-today .ui-state-default {
-    color: #ECA8AF; }
+    color: #a42431; }
+  .ui-datepicker-inline .ui-state-highlight a {
+    background: inherit !important; }
   .ui-datepicker-inline .ui-datepicker-header {
     position: relative; }
   .ui-datepicker-inline .ui-datepicker-prev {
-    background: #000;
-    position: absolute; }
-  .ui-datepicker-inline .ui-datepicker-next {
-    background: red;
+    background: url("../img/left.svg") no-repeat;
     position: absolute;
-    right: 0; }
+    cursor: pointer;
+    width: 20px; }
+    .ui-datepicker-inline .ui-datepicker-prev span {
+      opacity: 0; }
+  .ui-datepicker-inline .ui-datepicker-next {
+    background: url("../img/right.svg") no-repeat;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    width: 20px; }
+    .ui-datepicker-inline .ui-datepicker-next span {
+      opacity: 0; }
   .ui-datepicker-inline .ui-datepicker-title {
     text-align: center;
     margin-bottom: 10px; }
   .ui-datepicker-inline .ui-datepicker-calendar {
     width: 100%;
-    height: 93%; }
+    height: 93%;
+    position: relative; }
+    .ui-datepicker-inline .ui-datepicker-calendar::after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      z-index: 11; }
     .ui-datepicker-inline .ui-datepicker-calendar span {
-      color: #ECA8AF; }
+      color: #a42431; }
     .ui-datepicker-inline .ui-datepicker-calendar thead tr {
       background: inherit; }
     .ui-datepicker-inline .ui-datepicker-calendar tr {
-      background: #C2EAD6; }
+      background: #9cddbd; }
     .ui-datepicker-inline .ui-datepicker-calendar td {
       text-align: center; }
+
+.faqWrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 20px; }
+  .faqWrapper .active {
+    background: #f5d2d5 !important; }
+  .faqWrapper .faqText {
+    display: grid;
+    background: rgba(236, 168, 175, 0.5);
+    color: #fff;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 400px; }
+    .faqWrapper .faqText h2 {
+      font-weight: bold; }
+  .faqWrapper .topAccordeon {
+    background: #ECA8AF;
+    color: #fff;
+    -webkit-transition: background 0.5s ease;
+    transition: background 0.5s ease;
+    cursor: pointer; }
+    .faqWrapper .topAccordeon:hover {
+      background: #f5d2d5; }
+  .faqWrapper .topAccordeon:not(:nth-last-of-type(2)) {
+    border-bottom: 1px solid #fff; }
+  .faqWrapper .bottomAccordeon {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.05); }
+
+.coursesWrapper {
+  display: grid;
+  background: rgba(0, 0, 0, 0.03);
+  grid-template-columns: minmax(200px, 0.7fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .coursesWrapper .active {
+    background: #f8e064 !important; }
+  .coursesWrapper h2 {
+    margin: 20px 0; }
+  .coursesWrapper .topAccordeon {
+    background: #FAEA95;
+    color: #fff;
+    -webkit-transition: background 0.5s ease;
+    transition: background 0.5s ease; }
+    .coursesWrapper .topAccordeon:hover {
+      background: #f8e064; }
+    .coursesWrapper .topAccordeon:not(:nth-last-of-type(2)) {
+      border-bottom: 1px solid #fff; }
+  .coursesWrapper .bottomAccordeon {
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: #fff; }
+    .coursesWrapper .bottomAccordeon tr:nth-of-type(2n+1) {
+      background: rgba(0, 0, 0, 0.1); }
+    .coursesWrapper .bottomAccordeon table {
+      min-width: 800px;
+      text-align: center;
+      padding: 10px 0; }
+
+.constsOfTrenindWrapper {
+  background: rgba(236, 168, 175, 0.5);
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: .6fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .constsOfTrenindWrapper .costsOfTrening {
+    position: relative;
+    background: #ECA8AF;
+    display: grid; }
+    .constsOfTrenindWrapper .costsOfTrening .icon {
+      width: 100px;
+      background: #fff;
+      border: 1px solid #ECA8AF;
+      border-radius: 100%;
+      display: grid;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center; }
+      .constsOfTrenindWrapper .costsOfTrening .icon img {
+        width: 60px;
+        padding: 20px; }
 
 /*==========  Desktop First  ========== */
 /* Large Devices, Wide Screens */

@@ -35,19 +35,32 @@
 
 	.ui-datepicker-today
 		.ui-state-default
-			color: $pink
+			color: darken($pink, 40%)
+
+	.ui-state-highlight a
+		background: inherit !important
 
 	.ui-datepicker-header
 		position: relative
 
 	.ui-datepicker-prev
-		background: #000
+		background: url("../img/left.svg") no-repeat
 		position: absolute
+		cursor: pointer
+		width: 20px
+
+		span
+			opacity: 0
 
 	.ui-datepicker-next
-		background: red
+		background: url("../img/right.svg") no-repeat
 		position: absolute
 		right: 0
+		cursor: pointer
+		width: 20px
+
+		span
+			opacity: 0
 
 	.ui-datepicker-title
 		text-align: center
@@ -56,14 +69,24 @@
 	.ui-datepicker-calendar
 		width: 100%
 		height: 93%
+		position: relative
+
+		&::after
+			position: absolute
+			width: 100%
+			height: 100%
+			background: #000
+			z-index: 11
+
 		span
-			color: $pink
+			color: darken($pink, 40%)
+
 		thead
 			tr
 				background: inherit
 
 		tr
-			background: $blue
+			background: darken($blue, 10%)
 
 		td
 			text-align: center

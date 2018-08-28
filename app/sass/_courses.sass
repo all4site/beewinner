@@ -1,0 +1,61 @@
+.coursesWrapper
+	display: grid
+	background: fade-out($black, 0.97)
+	grid-template-columns: minmax(200px, 0.7fr)
+	justify-content: center
+
+	.active
+		background: darken($accent, 10%) !important
+
+	h2
+		margin: 20px 0
+
+	.topAccordeon
+		background: $accent
+		color: $white
+		transition: background 0.5s ease
+
+		&:hover
+			background: darken($accent, 10%)
+
+		&:not(:nth-last-of-type(2))
+			border-bottom: 1px solid $white
+
+	.bottomAccordeon
+		display: grid
+		justify-content: center
+		background: $white
+
+		tr:nth-of-type(2n+1)
+			background: fade-out($black, 0.9)
+
+		table
+			min-width: 800px
+			text-align: center
+			padding: 10px 0
+
+.constsOfTrenindWrapper
+	background: fade-out($pink, 0.5)
+	margin-top: 50px
+	display: grid
+	grid-template-columns: .6fr
+	justify-content: center
+
+	.costsOfTrening
+		position: relative
+		background: $pink
+		display: grid
+
+
+		.icon
+			width: 100px
+			// height: 100px
+			background: $white
+			border: 1px solid $pink
+			border-radius: 100%
+			display: grid
+			justify-content: center
+			align-content: center
+			img
+				width: 60px
+				padding: 20px
