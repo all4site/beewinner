@@ -1,11 +1,25 @@
 $(document).ready(function () {
 	$('.sliderTrening').slick({
 		prevArrow: '<div class="arrow left"><img src="img/left.svg", alt=""></div>',
-		nextArrow: '<div class="arrow right"><img src="img/right.svg", alt=""></div>'
+		nextArrow: '<div class="arrow right"><img src="img/right.svg", alt=""></div>',
+		responsive: [{
+			breakpoint: 490,
+			settings: {
+				arrows: false
+			}
+
+		}]
 	});
 	$('.sliderBlog').slick({
 		prevArrow: '<div class="arrow left"><img src="img/left.svg", alt=""></div>',
-		nextArrow: '<div class="arrow right"><img src="img/right.svg", alt=""></div>'
+		nextArrow: '<div class="arrow right"><img src="img/right.svg", alt=""></div>',
+		responsive: [{
+			breakpoint: 490,
+			settings: {
+				arrows: false
+			}
+
+		}]
 	});
 
 	$('.calendar').multiDatesPicker();
@@ -46,5 +60,22 @@ $(document).ready(function () {
 		}
 
 	});
+//Accordeon Small Category
+	$('.blogAccordeon>.bottomAccordeon').hide();
 
+	$('.blogAccordeon>.topAccordeon').click(function () {
+		var all = $('.blogAccordeon>.topAccordeon').removeClass('active');
+		var top = $(this).addClass('active');
+
+		var findAcc = $(this).next('.bottomAccordeon');
+		var findClosest = $(this).closest('.blogAccordeon');
+
+		if (findAcc.is(':visible')) {
+			findAcc.slideUp(500);
+		} else {
+			findClosest.find('>.bottomAccordeon').slideUp(500);
+			findAcc.slideDown(500);
+		}
+
+	});
 });

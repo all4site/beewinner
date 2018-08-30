@@ -92,9 +92,6 @@ gulp.task('sass', function () {
 			cascade: true
 		}))
 		.pipe(gulp.dest('app/css/'))
-		.pipe(browserSync.reload({
-			stream: true
-		}))
 });
 
 gulp.task('jade', function () {
@@ -134,6 +131,7 @@ gulp.task('default', ['browser-sync', 'jade', 'bower'], function () {
 	gulp.watch('app/*.jade', ['jade']);
 	gulp.watch('app/*.html', browserSync.reload);
 	gulp.watch('app/js/main.js', browserSync.reload);
+	gulp.watch('app/css/*.css', browserSync.reload);
 	gulp.watch('bower.json', ['bower']);
 });
 
