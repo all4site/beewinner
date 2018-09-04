@@ -1,50 +1,10 @@
 include _header
 body
 	include _logoTop
+	include _smallMenu
 	.wrapper
 		.blogPage
-			.blogAccordeon
-				.topAccordeon
-					h4 популярные
-				.bottomAccordeon.popular
-					span Curabitur aliquet
-					span Curabitur aliquet
-					span Curabitur aliquet
-				.topAccordeon
-					h4 рубрики
-				.bottomAccordeon.headings
-					span Curabitur aliquet
-					span 1
-					span Curabitur aliquet
-					span 2
-					span Curabitur aliquet
-					span 3
-					span Curabitur aliquet
-					span 4
-					span Curabitur aliquet
-					span 5
-				.topAccordeon
-					h4 рекомендуемые
-				.bottomAccordeon.recomended
-					.recomendedBloc
-							img(src="img/recom1.png", alt="")
-							p Pellentesque in ipsum
-							span Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor lectus nibh. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta.
-							.more
-								span подробнее...
-						.recomendedBloc
-							img(src="img/recom2.png", alt="")
-							p Pellentesque in ipsum
-							span Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor lectus nibh. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta.
-							.more
-								span подробнее...
-						.recomendedBloc
-							img(src="img/recom2.png", alt="")
-							p Pellentesque in ipsum
-							span Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor lectus nibh. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta.
-							.more
-								span подробнее...
-
+			include _blogAccordeon
 			.blogContent
 				.blogInside
 					img(src="img/blog1.png", alt="")
@@ -64,45 +24,7 @@ body
 					p Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Curabitur aliquet quam id dui posuere blandit. Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat. Nulla porttitor accumsan tincidunt.
 					.more
 						span подробнее...
-			.categoryBloc
-				.categoryContentWrapper
-					.popular.grid
-						h4 популярные
-						span Curabitur aliquet
-						span Curabitur aliquet
-						span Curabitur aliquet
-					.headings.grid
-						h4 рубрики
-						span Curabitur aliquet
-						span 1
-						span Curabitur aliquet
-						span 2
-						span Curabitur aliquet
-						span 3
-						span Curabitur aliquet
-						span 4
-						span Curabitur aliquet
-						span 5
-					.recomended.grid
-						h4 рекомендуемые
-						.recomendedBloc
-							img(src="img/recom1.png", alt="")
-							p Pellentesque in ipsum
-							span Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor lectus nibh. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta.
-							.more
-								span подробнее...
-						.recomendedBloc
-							img(src="img/recom2.png", alt="")
-							p Pellentesque in ipsum
-							span Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor lectus nibh. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta.
-							.more
-								span подробнее...
-						.recomendedBloc
-							img(src="img/recom3.png", alt="")
-							p Pellentesque in ipsum
-							span Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor lectus nibh. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta.
-							.more
-								span подробнее...
+			include _categoryRightBlock
 			.pagination
 				img(src="img/left.svg", alt="")
 				span 1

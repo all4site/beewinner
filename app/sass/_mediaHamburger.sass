@@ -1,0 +1,55 @@
+//  Large Devices, Wide Screens
+@media only screen and (max-width: 1200px)
+	//
+
+//  Medium Devices, Desktops
+@media only screen and (max-width: 992px)
+	//
+
+//  Small Devices, Tablets
+@media only screen and (max-width: 768px)
+	//
+
+@media only screen and (max-width: 568px)
+	.smallMenuWrapper
+		top: 0
+
+	.smallMenu
+		.smallMenuBox
+			display: none
+
+//  Extra Small Devices, Phones
+@media only screen and (max-width: 480px)
+	.smallMenuShowBox
+		grid-template-columns: repeat(4, minmax(50px, 1fr))
+
+		.circle
+			.fab,
+			.fas
+				font-size: 2rem
+
+//  Custom, iPhone Retina
+@media only screen and (max-width: 320px)
+	.smallMenuWrapper
+		top: auto
+
+	.smallMenu
+		.smallMenuBox
+			display: none
+
+	.smallMenuShow
+		.smallMenuWrapper
+			span
+				font-size: 2rem
+				margin-top: 0
+
+			ul
+				margin-top: 0
+
+	.smallMenuShowBox
+		padding: 0 10px
+
+		.circle
+			.fab,
+			.fas
+				font-size: 1.5rem

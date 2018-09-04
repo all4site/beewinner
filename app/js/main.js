@@ -24,14 +24,32 @@ $(document).ready(function () {
 
 	$('.calendar').multiDatesPicker();
 //Accordeon
-	$('.faqAccordeon>.bottomAccordeon').not(':first').hide();
+	$(document).ready(function () {
+		if ($(window).width() >= '768') {
+			$('.accordeon>.bottomAccordeon').not(':first').hide();
 
-	$('.faqAccordeon>.topAccordeon').click(function () {
-		var all = $('.faqAccordeon>.topAccordeon').removeClass('active');
+		} else {
+			$('.accordeon>.bottomAccordeon').hide();
+		}
+
+	});
+
+	$(window).resize(function () {
+		var xalk = $('.accordeon>.bottomAccordeon').first();
+
+		if ($(window).width() >= '768') {
+			$(xalk).show();
+		} else {
+			$('.accordeon>.bottomAccordeon').hide();
+		}
+	});
+
+	$('.accordeon>.topAccordeon').click(function () {
+		var all = $('.accordeon>.topAccordeon').removeClass('active');
 		var top = $(this).addClass('active');
 
 		var findAcc = $(this).next('.bottomAccordeon');
-		var findClosest = $(this).closest('.faqAccordeon');
+		var findClosest = $(this).closest('.accordeon');
 
 		if (findAcc.is(':visible')) {
 			findAcc.slideUp(1000);
@@ -41,41 +59,23 @@ $(document).ready(function () {
 		}
 
 	});
-
-// Accordeon courses
-	$('.coursesAccordeon>.bottomAccordeon').not(':first').hide();
-
-	$('.coursesAccordeon>.topAccordeon').click(function () {
-		var all = $('.coursesAccordeon>.topAccordeon').removeClass('active');
-		var top = $(this).addClass('active');
-
-		var findAcc = $(this).next('.bottomAccordeon');
-		var findClosest = $(this).closest('.coursesAccordeon');
-
-		if (findAcc.is(':visible')) {
-			findAcc.slideUp(1000);
-		} else {
-			findClosest.find('>.bottomAccordeon').slideUp(1000);
-			findAcc.slideDown(1000);
-		}
-
+//Small menu
+	var smallMenu = $('.smallMenuWrapper').find('.hamburger');
+	var smallMenuHide = $('.smallMenuShow').find('.hamburger');
+	var pulce = $('.pulse');
+	smallMenu.click(function () {
+		$('.smallMenuShow').show('slide', {
+			direction: 'down'
+		}, 600);
+		$(smallMenuHide).addClass('is-active');
+		$('body').addClass('bodyHidden');
+		// pulce.css('zIndex', '0');
 	});
-//Accordeon Small Category
-	$('.blogAccordeon>.bottomAccordeon').hide();
-
-	$('.blogAccordeon>.topAccordeon').click(function () {
-		var all = $('.blogAccordeon>.topAccordeon').removeClass('active');
-		var top = $(this).addClass('active');
-
-		var findAcc = $(this).next('.bottomAccordeon');
-		var findClosest = $(this).closest('.blogAccordeon');
-
-		if (findAcc.is(':visible')) {
-			findAcc.slideUp(500);
-		} else {
-			findClosest.find('>.bottomAccordeon').slideUp(500);
-			findAcc.slideDown(500);
-		}
-
+	smallMenuHide.click(function () {
+		$('.smallMenuShow').hide('slide', {direction: 'up'}, 600);
+		$(this).removeClass('is-active');
+		$('body').removeClass('bodyHidden');
+		// pulce.css('zIndex', '1');
 	});
+
 });

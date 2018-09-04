@@ -2,6 +2,7 @@ include _header
 include _header
 body
 	include _logoTop
+	include _smallMenu
 	.wrapper
 		.price
 			h2 цены
@@ -16,20 +17,28 @@ body
 		.wrapper
 			h5 приложения
 			.priceAppsWrapper
+				a(href="#!").boxApps
+					.boxAppsHover
+						span.hide скачать с официального сайта
+						span.small скачать
+					.circle
+						img(src="img/skype.svg", alt="")
 				a(href="#!").boxApps.hoverable.z-depth-2
 					.boxAppsHover
-						span скачать с официального сайта
-					img(src="img/skype.svg", alt="")
+						span.hide скачать с официального сайта
+						span.small скачать
+					.circle
+						img(src="img/Facebook_Messenger_logo.svg", alt="")
 				a(href="#!").boxApps.hoverable.z-depth-2
 					.boxAppsHover
-						span скачать с официального сайта
-					img(src="img/facebook-messenger.svg", alt="")
+						span.hide скачать с официального сайта
+						span.small скачать
+					.circle
+						img(src="img/hangout.svg", alt="")
 				a(href="#!").boxApps.hoverable.z-depth-2
 					.boxAppsHover
-						span скачать с официального сайта
-					img(src="img/hangout.svg", alt="")
-				a(href="#!").boxApps.hoverable.z-depth-2
-					.boxAppsHover
-						span скачать с официального сайта
-					span zoom
+						span.hide скачать с официального сайта
+						span.small скачать
+					.circle
+						span zoom
 	include _footer

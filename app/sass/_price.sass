@@ -1,3 +1,5 @@
+.small
+	display: none
 .priceTabel
 	display: grid
 	grid-template-columns: 2fr 1fr
@@ -23,11 +25,11 @@
 .priceAppsWrapper
 	display: grid
 	grid-template-columns: repeat(4, 1fr)
+	grid-column-gap: 20px
 
 	.boxApps
 		background: $blue
-		max-width: 300px
-		height: 300px
+		width: 100%
 		border-radius: 100%
 		display: grid
 		justify-items: center
@@ -36,11 +38,23 @@
 		border: 1px solid $pink
 		position: relative
 
+		&:hover
+			background: $accent
+		&:hover > .circle
+			opacity: 0
 		&:hover > .boxAppsHover
 			opacity: 1
 
-		img
-			max-width: 100px
+		.circle
+			padding: 50% 0
+			display: grid
+			height: 0
+			justify-content: center
+			align-content: center
+			transition: opacity .5s ease
+
+			img
+				max-width: 100px
 
 		span
 			font-size: 4rem
@@ -49,13 +63,16 @@
 		.boxAppsHover
 			opacity: 0
 			position: absolute
-			background: $accent
+
+			// background: $accent
 			width: 100%
 			height: 100%
 			border-radius: 100%
-			transition: all .5s ease
+			transition: all 0.5s ease
 			display: grid
 			justify-items: center
 			align-items: center
+
 			span
 				font-size: 1rem
+				text-align: center
