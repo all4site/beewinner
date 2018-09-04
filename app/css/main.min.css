@@ -846,6 +846,9 @@ h6 {
 .small {
   display: none; }
 
+.hide {
+  display: none; }
+
 .priceTabel {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -874,51 +877,30 @@ h6 {
     width: 100%;
     border-radius: 100%;
     display: grid;
-    justify-items: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     margin-top: 50px;
     border: 1px solid #ECA8AF;
-    position: relative; }
+    position: relative;
+    padding: 50% 0;
+    height: 0; }
     .priceAppsWrapper .boxApps:hover {
       background: #FAEA95; }
-    .priceAppsWrapper .boxApps:hover > .circle {
-      opacity: 0; }
-    .priceAppsWrapper .boxApps:hover > .boxAppsHover {
-      opacity: 1; }
+      .priceAppsWrapper .boxApps:hover > .circle img {
+        display: none; }
+      .priceAppsWrapper .boxApps:hover > .circle .zoom {
+        display: none; }
+      .priceAppsWrapper .boxApps:hover > .circle .hide {
+        display: grid; }
     .priceAppsWrapper .boxApps .circle {
-      padding: 50% 0;
       display: grid;
-      height: 0;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -ms-flex-line-pack: center;
-          align-content: center;
-      -webkit-transition: opacity .5s ease;
-      transition: opacity .5s ease; }
-      .priceAppsWrapper .boxApps .circle img {
-        max-width: 100px; }
-    .priceAppsWrapper .boxApps span {
-      font-size: 4rem;
-      text-transform: uppercase; }
-    .priceAppsWrapper .boxApps .boxAppsHover {
-      opacity: 0;
       position: absolute;
       width: 100%;
       height: 100%;
-      border-radius: 100%;
-      -webkit-transition: all 0.5s ease;
-      transition: all 0.5s ease;
-      display: grid;
       justify-items: center;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
-      .priceAppsWrapper .boxApps .boxAppsHover span {
-        font-size: 1rem;
-        text-align: center; }
+      .priceAppsWrapper .boxApps .circle img {
+        width: 50%; }
 
 .smallMenuWrapper {
   display: grid;
@@ -987,9 +969,9 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
-  .smallMenuShow .smallMenuWrapper {
+  .smallMenuShow .smallMenuShowWrapper {
     background: rgba(236, 168, 175, 0.4);
-    display: fixed;
+    display: grid;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1030,8 +1012,11 @@ h6 {
 .smallMenuShowBox {
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: repeat(4, minmax(100px, 1fr));
-  grid-column-gap: 20px; }
+  grid-template-columns: repeat(4, minmax(50px, 100px));
+  grid-column-gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   .smallMenuShowBox .circle {
     width: 100%;
     display: grid;
@@ -1042,7 +1027,7 @@ h6 {
     .smallMenuShowBox .circle .fab,
     .smallMenuShowBox .circle .fas {
       display: grid;
-      font-size: 3rem;
+      font-size: 2.5rem;
       line-height: 0;
       text-align: center;
       color: #ECA8AF; }
@@ -1278,119 +1263,107 @@ h6 {
     right: auto !important;
     top: -40px !important; } }
 
-@media only screen and (max-width: 1200px) {
-  .priceAppsWrapper .boxApps .boxAppsHover span {
-    font-size: 1rem;
-    text-align: center; }
-  .boxApps .circle span {
-    font-size: 3rem !important; } }
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
   .priceAppsWrapper {
     grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     grid-column-gap: 0; }
     .priceAppsWrapper .boxApps {
-      margin: 20px;
-      width: 30vw;
-      height: 30vw; }
-  .priceTabel span {
-    font-size: 1rem; } }
-
-@media only screen and (max-width: 568px) {
-  .priceAppsWrapper .boxApps .circle {
-    padding: 0;
-    height: auto; } }
-
-@media only screen and (max-width: 480px) {
-  .hide {
-    display: none; }
-  .small {
-    display: grid; }
-  .priceAppsWrapper .boxApps {
-    border-radius: 0;
-    margin: 5px; }
-    .priceAppsWrapper .boxApps img {
-      width: 40%; }
-  .priceAppsWrapper .circle {
-    justify-items: center; }
-    .priceAppsWrapper .circle span {
-      font-size: 1.5rem !important;
-      position: absolute;
-      margin-right: 30px;
-      margin-bottom: 15px; }
-  .priceAppsWrapper .boxApps:nth-of-type(1) {
-    border-top-left-radius: 100%; }
-    .priceAppsWrapper .boxApps:nth-of-type(1) img {
-      margin-left: 30px;
-      margin-top: 15px; }
-    .priceAppsWrapper .boxApps:nth-of-type(1) .boxAppsHover span {
-      margin-left: 20px;
-      margin-top: 15px; }
-  .priceAppsWrapper .boxApps:nth-of-type(2) {
-    border-top-right-radius: 100%; }
-    .priceAppsWrapper .boxApps:nth-of-type(2) img {
-      margin-right: 30px;
-      margin-top: 15px; }
-    .priceAppsWrapper .boxApps:nth-of-type(2) .boxAppsHover span {
-      margin-right: 20px;
-      margin-top: 15px; }
-  .priceAppsWrapper .boxApps:nth-of-type(3) {
-    border-bottom-left-radius: 100%; }
-    .priceAppsWrapper .boxApps:nth-of-type(3) img {
-      margin-left: 30px;
-      margin-bottom: 15px; }
-    .priceAppsWrapper .boxApps:nth-of-type(3) .boxAppsHover span {
-      margin-left: 20px;
-      margin-top: -15px; }
-  .priceAppsWrapper .boxApps:nth-of-type(4) {
-    border-bottom-right-radius: 100%; }
-    .priceAppsWrapper .boxApps:nth-of-type(4) .boxAppsHover span {
-      margin-right: 20px;
-      margin-top: -15px; }
+      border-radius: 0;
+      margin: 0; }
+      .priceAppsWrapper .boxApps:nth-of-type(1) {
+        border-bottom: none; }
+      .priceAppsWrapper .boxApps:nth-of-type(2) {
+        border-bottom: none; }
+      .priceAppsWrapper .boxApps:hover > .circle .hide {
+        display: none; }
+      .priceAppsWrapper .boxApps:hover > .circle .small {
+        display: grid; }
+      .priceAppsWrapper .boxApps img {
+        width: 40%; }
+    .priceAppsWrapper .boxApps:nth-of-type(1) {
+      border-top-left-radius: 100%; }
+      .priceAppsWrapper .boxApps:nth-of-type(1) img, .priceAppsWrapper .boxApps:nth-of-type(1) .small {
+        margin-left: 30px;
+        margin-top: 15px; }
+    .priceAppsWrapper .boxApps:nth-of-type(2) {
+      border-top-right-radius: 100%; }
+      .priceAppsWrapper .boxApps:nth-of-type(2) img, .priceAppsWrapper .boxApps:nth-of-type(2) .small {
+        margin-right: 30px;
+        margin-top: 15px; }
+    .priceAppsWrapper .boxApps:nth-of-type(3) {
+      border-bottom-left-radius: 100%; }
+      .priceAppsWrapper .boxApps:nth-of-type(3) img, .priceAppsWrapper .boxApps:nth-of-type(3) .small {
+        margin-left: 30px;
+        margin-bottom: 15px; }
+    .priceAppsWrapper .boxApps:nth-of-type(4) {
+      border-bottom-right-radius: 100%; }
+      .priceAppsWrapper .boxApps:nth-of-type(4) img, .priceAppsWrapper .boxApps:nth-of-type(4) .small {
+        margin-right: 25px;
+        margin-bottom: 15px; }
   .priceTabel {
     grid-template-columns: 1fr; } }
 
-@media only screen and (max-width: 320px) {
-  .priceAppsWrapper .boxApps {
-    margin: 0; }
-  .priceAppsWrapper .boxApps .circle span {
-    font-size: 1.2rem;
-    position: absolute;
-    margin-right: 20px;
-    margin-bottom: 15px; } }
-
-@media only screen and (max-width: 568px) {
+@media only screen and (min-width: 568px) and (max-width: 812px) and (orientation: landscape) {
   .smallMenuWrapper {
     top: 0; }
   .smallMenu .smallMenuBox {
-    display: none; } }
+    display: none; }
+  .smallMenuShow .smallMenuShowWrapper {
+    grid-template-columns: 2fr 1fr; }
+    .smallMenuShow .smallMenuShowWrapper span {
+      display: none; }
+    .smallMenuShow .smallMenuShowWrapper ul {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+    .smallMenuShow .smallMenuShowWrapper .smallMenuShowBox {
+      grid-auto-flow: row;
+      grid-template-columns: 50px;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: end;
+      -ms-flex-line-pack: end;
+          align-content: end; }
+      .smallMenuShow .smallMenuShowWrapper .smallMenuShowBox .circle {
+        margin: 5px -20px; }
+      .smallMenuShow .smallMenuShowWrapper .smallMenuShowBox .fab,
+      .smallMenuShow .smallMenuShowWrapper .smallMenuShowBox .fas {
+        font-size: 1rem; } }
 
 @media only screen and (max-width: 480px) {
-  .smallMenuShowBox {
-    grid-template-columns: repeat(4, minmax(50px, 1fr)); }
-    .smallMenuShowBox .circle .fab,
-    .smallMenuShowBox .circle .fas {
-      font-size: 2rem; } }
+  .smallMenuWrapper {
+    top: 0; }
+    .smallMenuWrapper .smallMenuBox {
+      display: none; }
+  .smallMenuShow .smallMenuShowWrapper {
+    grid-template-columns: 1fr;
+    -ms-flex-line-pack: justify;
+        align-content: space-between; }
+    .smallMenuShow .smallMenuShowWrapper span {
+      display: grid;
+      margin: 0; }
+    .smallMenuShow .smallMenuShowWrapper ul {
+      grid-template-columns: 1fr;
+      margin: 0; }
+    .smallMenuShow .smallMenuShowWrapper .smallMenuShowBox {
+      grid-template-columns: repeat(4, minmax(50px, 1fr));
+      grid-auto-flow: column;
+      justify-items: center;
+      padding: 0 10px; }
+      .smallMenuShow .smallMenuShowWrapper .smallMenuShowBox .fab,
+      .smallMenuShow .smallMenuShowWrapper .smallMenuShowBox .fas {
+        font-size: 1.5rem; } }
 
 @media only screen and (max-width: 320px) {
   .smallMenuWrapper {
     top: auto; }
   .smallMenu .smallMenuBox {
     display: none; }
-  .smallMenuShow .smallMenuWrapper span {
+  .smallMenuShow .smallMenuShowWrapper span {
     font-size: 2rem;
     margin-top: 0; }
-  .smallMenuShow .smallMenuWrapper ul {
+  .smallMenuShow .smallMenuShowWrapper ul {
     margin-top: 0; }
   .smallMenuShowBox {
-    padding: 0 10px; }
-    .smallMenuShowBox .circle .fab,
-    .smallMenuShowBox .circle .fas {
-      font-size: 1.5rem; } }
+    padding: 0 10px; } }
