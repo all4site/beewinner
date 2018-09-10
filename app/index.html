@@ -20,6 +20,24 @@
   </head>
 </html>
 <body>
+  <div class="searchWrapper">
+    <div class="hamburger hamburger--slider is-active">
+      <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+      </div>
+    </div>
+    <div class="search">
+      <form role="search" method="get" id="searchform">
+        <div class="box_one box">
+          <input type="text" name="s" id="s"/>
+          <label for="s" class="screen-reader-text">Поиск</label>
+        </div>
+        <div class="box_two box">
+          <input type="submit" id="searchsubmit"/>
+        </div>
+      </form>
+    </div>
+  </div>
   <div class="headerMain grid">
     <div class="aboutHeaderMain grid">
       <div class="smallMenuWrapper">
@@ -190,14 +208,14 @@
       </div>
     </div>
     <div class="footerBottom grid"></div>
-    <!-- build:js js/main.min.js-->
+    <!-- build:js js/source.min.js-->
     <!-- bower:js-->
     <script src="js/jquery/dist/jquery.js"></script>
     <script src="js/slick-carousel/slick/slick.js"></script>
     <script src="js/jquery-ui/jquery-ui.js"></script>
     <script src="js/jquery-ui-multidatespicker/jquery-ui.multidatespicker.js"></script>
     <!-- endbower-->
+    <!--endbuild-->
     <script src="js/main.js"></script>
-    <!-- endbuild-->
   </div>
 </body>

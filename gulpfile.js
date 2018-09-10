@@ -39,11 +39,13 @@ gulp.task('ftp', function () {
 // BUILD
 gulp.task('build', ['clean', 'tiny', 'combine'], function () {
 	var buildFonts = gulp.src('app/fonts/**/*')
-		.pipe(gulp.dest('dist/fonts'))
+		.pipe(gulp.dest('dist/fonts'));
 	var buildFonts = gulp.src('app/js/all4site-fontawesome/dist/fonts/**/*')
-		.pipe(gulp.dest('dist/fonts/'))
+		.pipe(gulp.dest('dist/fonts/'));
 	var buildFonts = gulp.src('app/img/*.svg')
-		.pipe(gulp.dest('dist/img/'))
+		.pipe(gulp.dest('dist/img/'));
+	var buildJs = gulp.src('app/js/main.js')
+		.pipe(gulp.dest('dist/js'));
 	var buildUncss = gulp.src('dist/css/main.min.css')
 		// .pipe(uncss({
 		// 	html: ['dist/index.html']
@@ -59,7 +61,7 @@ gulp.task('tiny', function () {
 });
 
 gulp.task('combine', function () {
-	return gulp.src('app/index.jade')
+	return gulp.src(['app/*.jade', '!app/_*.jade'])
 		.pipe(jade({
 			pretty: true
 		}))
